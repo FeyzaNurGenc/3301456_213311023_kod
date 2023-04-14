@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BeyazEsyaEkran extends StatefulWidget {
   const BeyazEsyaEkran({super.key});
@@ -11,7 +12,9 @@ class _BeyazEsyaEkranState extends State<BeyazEsyaEkran> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Beyaz Eşya")),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text("Beyaz Eşya", style: GoogleFonts.cardo(fontSize: 35))),
       body: BeyazEsya(),
     );
   }
@@ -70,7 +73,9 @@ class _BeyazEsyaState extends State<BeyazEsya> {
                 itemCount: AlisverisListesi.length,
                 itemBuilder: (context, indeksNumarasi) {
                   return ListTile(
-                    title: Text(AlisverisListesi[indeksNumarasi]),
+                    title: Text(AlisverisListesi[indeksNumarasi],
+                        style: GoogleFonts.merienda(
+                            fontSize: 20, fontStyle: FontStyle.italic)),
                   );
                 })),
         TextField(

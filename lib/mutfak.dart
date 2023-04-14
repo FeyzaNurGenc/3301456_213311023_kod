@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MutfakEkran extends StatefulWidget {
   const MutfakEkran({super.key});
@@ -11,7 +12,12 @@ class _MutfakEkranState extends State<MutfakEkran> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Mutfak")),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            "Mutfak",
+            style: GoogleFonts.cardo(fontSize: 35),
+          )),
       body: Mutfak(),
     );
   }
@@ -82,7 +88,9 @@ class _MutfakState extends State<Mutfak> {
                 itemCount: AlisverisListesi.length,
                 itemBuilder: (context, indeksNumarasi) {
                   return ListTile(
-                    title: Text(AlisverisListesi[indeksNumarasi]),
+                    title: Text(AlisverisListesi[indeksNumarasi],
+                        style: GoogleFonts.merienda(
+                            fontSize: 20, fontStyle: FontStyle.italic)),
                   );
                 })),
         TextField(

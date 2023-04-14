@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class YatakOdasiEkran extends StatefulWidget {
   const YatakOdasiEkran({super.key});
@@ -11,7 +12,9 @@ class _YatakOdasiEkranState extends State<YatakOdasiEkran> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Yatak Odasi")),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text("Yatak Odası", style: GoogleFonts.cardo(fontSize: 35))),
       body: YatakOdasi(),
     );
   }
@@ -69,7 +72,9 @@ class _YatakOdasiState extends State<YatakOdasi> {
                 itemCount: AlisverisListesi.length,
                 itemBuilder: (context, indeksNumarasi) {
                   return ListTile(
-                    title: Text(AlisverisListesi[indeksNumarasi]),
+                    title: Text(AlisverisListesi[indeksNumarasi],
+                        style: GoogleFonts.merienda(
+                            fontSize: 20, fontStyle: FontStyle.italic)),
                   );
                 })),
         TextField(

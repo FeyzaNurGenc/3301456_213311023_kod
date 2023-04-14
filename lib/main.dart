@@ -5,6 +5,7 @@ import 'package:ceyiz/mutfak.dart';
 import 'package:ceyiz/oturma_odasi.dart';
 import 'package:ceyiz/salon.dart';
 import 'package:ceyiz/beyaz_esya.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Çeyiz",
       home: Ana(),
       theme: ThemeData(
@@ -28,7 +30,8 @@ class Ana extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Çeyiz Listesi"),
+        centerTitle: true,
+        title: Text("Çeyiz Listesi", style: GoogleFonts.cardo(fontSize: 35)),
       ),
       body: AnaEkran(),
     );
@@ -119,5 +122,8 @@ Widget SinifButonu(BuildContext context,
         iconlar,
         color: Colors.black,
       ),
-      label: Text(isimler));
+      label: Text(
+        isimler,
+        style: GoogleFonts.merienda(fontSize: 15, fontStyle: FontStyle.italic),
+      ));
 }
